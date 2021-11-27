@@ -5,18 +5,18 @@
 
 import csv
 
-def translate_en_to_ru(word):
+def translate_en_to_ru(dictionary, word):
     return dictionary[word]
 
 
-def translate_ru_to_en(word):
+def translate_ru_to_en(dictionary, word):
     for en, ru in dictionary.items():
         if word == ru:
             return en
 
 
 def load_dictionary():
-    result == {}
+    result = {}
     with open("dictionary.csv", "r") as file:
         reader = csv.reader(file)
         for row in reader:
